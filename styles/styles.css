@@ -1,0 +1,144 @@
+:root {
+
+    /* Colours */
+    /* ### Primary */
+    --VeryDarkCyan: hsl(158, 36%, 9%);
+    --DarkCyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    /* ### Neutral */
+
+    --VeryDarkBlue: hsl(212, 21%, 14%);
+    --DarkGrayishBlue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Fonts */
+    --default-font: 'Montserrat', sans-serif;
+    --secondary-font: 'Fraunces', serif;
+}
+
+html,
+body {
+    height: 100%;
+    display: grid;
+    background-color: var(--Cream);
+    font-family: var(--default-font);
+    color: var(--DarkGrayishBlue);
+}
+
+.product-card {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: 55%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 50%;
+    background-size: contain;
+    min-width: 50%;
+}
+
+.product-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+
+.product-content {
+    width: 50%;
+    background-color: var(--White);
+    padding: 40px;
+}
+
+.product-title {
+    color: var(--DarkGrayishBlue);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5ch;
+}
+
+.product-name {
+    color: var(--VeryDarkBlue);
+    font-family: var(--secondary-font);
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.product-decription {
+    color: var(--DarkCyan);
+
+}
+
+.pricing {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.product-price {
+    font-size: 2.5rem;
+    flex-direction: row;
+    font-family: var(--secondary-font);
+    color: var(--DarkCyan);
+}
+
+.orignal-price {
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    padding-left: 20px;
+    color: var(--DarkGrayishBlue);
+}
+
+.cart-icon {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.cart-btn {
+    font-weight: 500;
+    font-size: 16px;
+    width: 100%;
+    background-color: var(--DarkCyan);
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    color: var(--White);
+}
+
+.cart-btn:hover {
+    background-color: var(--VeryDarkCyan);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1120px) {
+
+    .product-card {
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+
+    .product-card {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .product-image{
+        width: auto;
+    }
+
+    .product-content{
+        width: auto;
+        height: 60%;
+    }
+
+   
+}
